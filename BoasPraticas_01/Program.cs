@@ -393,6 +393,20 @@ namespace BoasPraticas_01
             // senão, nome é igual a nomePrincipal
             string nome = nomePrincipal ?? nomeAlternativo;
             Console.WriteLine($"Nome: {nome}");
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            string nome1 = "          João Figues da Silva      ";
+            string nome2 = "Marcos Roberto";
+           
+            string nome3 = nome1.Trim() ?? nome2;
+            Console.WriteLine($"Nome 3: {nome3}");
+
+
+
+
+
         }
         static void SyntacticSugar2()
         {
@@ -409,13 +423,21 @@ namespace BoasPraticas_01
             Console.WriteLine("");
 
             string nomePrincipal2 = null;
-            string nomeAlternativo2 = "Arthur V. Pereira";
+            string nomeAlternativo2 = "Arthur V. Pereira      ";
             string nomeQualquer2 = null;
 
             string nome2 = nomePrincipal2 ?? nomeAlternativo2 ?? nomeQualquer2 ?? "Sem Nome";
 
             // Resultado: Nome = "Sem Nome"
             Console.WriteLine($"Nome 2: {nome2}");
+
+            int valor1 = 0;
+
+            int valorResult = valor1 > 0 ? valor1: 10;
+
+            // Resultado: Nome = "Sem Nome"
+            Console.WriteLine($"Não é aplicado para os tipos int: {valorResult}");
+
 
         }
 
